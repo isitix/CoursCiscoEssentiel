@@ -98,13 +98,52 @@ Les principaux protocoles au-dessus (que l'on rencontre dans le payload) sont :
 
 ## ARP
 
+Ressource possible : <https://en.wikipedia.org/wiki/Address_Resolution_Protocol>
 
+Points importants :
+
+- Permet de trouver l'adresse MAC d'une machine correspondant à une adresse IP
+- A l'interface entre la couche liaison et la couche IP
+- Standard Internet
+- Broadcast sur un segment de LAN (broadcast MAC, adresse MAC de destination = FF:FF:FF:FF:FF:FF)
+- Plusieurs types de message
+  - Request
+  - Reply
+  - Probe
+  - Announcement
 
 ## DHCP
 
+Ressource possible : <https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol>
 
+Points importants :
 
+- Permet l'attribution d'une IP à une station
+- Client-serveur : le client envoie une demande d'IP au serveur qui lui attribue une adresse
+- Broadcast ethernet
+- Discover - Offer - Request - Acknowledge
+- Le serveur peut envoyer des paramètres supplémentaires au client
+- Si plusieurs serveurs sont présents sur le réseau, le client indique dans le message REQUEST quelle offre il prend
 
+## ICMP
+
+Ressource possible : <https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol>
+
+C'est un protocole d'échange de messages de contrôle du réseau au niveau IP.
+
+Le format est défini dans un RFC (et sur la page Wikipedia). Il comprend notamment :
+
+- le type de message
+- le code du message
+- un checksum
+- le header et les 8 premiers octets du paquet auquel il répond si pertinent
+
+En pratique, il nous intéresse parce qu'il intervient pour :
+
+- le ping (type 8 code 0 echo request; type 0 code 0 echo response)
+- traceroute (TTL)
+- destination unreachable
+- messages de routage
 
 
 
