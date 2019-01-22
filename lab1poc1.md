@@ -67,7 +67,8 @@ BOM
 
 Pour plus de détails, voir le document ["bagage technique minimum"](bagagetechniquelab1poc1.md).
 
-## Fin du POC1, prochaines étapes :
+## Fin du POC1, prochaines étapes
 
 [Quizz du POC](https://goo.gl/forms/w5P1q7Pyi7i2lEax2)
+
 [Accès au POC2](lab1poc2.md)

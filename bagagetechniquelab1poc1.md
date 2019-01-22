@@ -15,8 +15,8 @@ Nombreuses ressources en ligne, par exemple :
 
 Points à retenir :
 
-- Vérifier la qualité du câble employé, 
-- Vérifier que le câblage est bien structuré, 
+- Vérifier la qualité du câble employé,
+- Vérifier que le câblage est bien structuré,
 - Demander les rapports de vérification de l'installateur
 - Calculer la longueur des cordons entre le panneau de brassage et l'équipement
 - Choisir des codes couleurs qui facilitent le repérage
@@ -41,7 +41,7 @@ Sur une nouvelle installation ou dans un existant, faites le point avec le respo
 
 ## Ethernet
 
-Trois ressources possibles : 
+Trois ressources possibles :
 
 - <https://en.wikipedia.org/wiki/Ethernet> pour une définition générale
 - <https://en.wikipedia.org/wiki/Ethernet_frame> pour la structure de la trame
@@ -70,13 +70,13 @@ Nombreuses ressources en ligne :
 Que retenir ?
 
 - Adresse source et destination font 32 bits
-- le header fait 256 bits 
+- le header fait 256 bits
 
 Un paquet IP est un objet relativement simple, contenant un header comportant :
 
-    * une adresse source, 
-    * une adresse destination, 
-    * quelques octets d'option
+- une adresse source,
+- une adresse destination,
+- quelques octets d'option
 
 suivi un payload
 
@@ -145,6 +145,5 @@ En pratique, il nous intéresse parce qu'il intervient pour :
 - destination unreachable
 - messages de routage
 
-
-
-
+## Quizz
+[Quizz concernant les fondamentaux LAN](https://goo.gl/forms/pEL958xrJduLg6uo2)
