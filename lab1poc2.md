@@ -37,3 +37,47 @@ Nous allons à présent paramétrer la partie "WAN" et mettre en place une confi
 - Configurer un trunk entre le switch et le routeur
 - Activer le routage entre les réseaux
 - Vérifier que vous parvenez à pinger l'ensemble des interfaces
+
+### Configuration des ports d'accès
+
+``` 
+enable
+conf t
+interface range FastEthernet 0/1-6
+switchport mode access
+switchport access vlan 10
+exit
+interface range FastEthernet 0/7-12
+switchport mode access
+switchport access vlan 70
+exit
+interface vlan 10
+no shutdown
+exit
+interface vlan 70
+no shutdown
+exit
+exit
+copy running-config startup-config
+```
+
+### Configuration des serveurs
+
+|Serveur | VLAN | Port | IP | Mask | Gateway |
+|--------|------|------|----|------|---------|
+|Serveur1|10|Fa0/1|12.10.1.1|255.255.0.0|12.10.0.1|
+|Serveur2|10|Fa0/2|12.10.1.2|255.255.0.0|12.10.0.1|
+|Serveur3|70|Fa0/6|12.70.1.1|255.255.0.0|12.70.0.1|
+|Serveur4|70|Fa0/6|12.70.1.2|255.255.0.0|12.70.0.1|
+
+Test de ping S1 => S2, etc...
+
+### Configuration du trunk sur le switch
+
+
+### Configuration du trunk sur le routeur
+
+
+## Prochaines étapes
+
+[Lab1Poc3](lab1poc3.md) : configuration de l'ASA
