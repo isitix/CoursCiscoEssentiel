@@ -1,0 +1,2 @@
+# Lab 2 : réseau campus
+Pour ce deuxième, nous allons travailler sur les problématiques spécifiques au LAN Campus, c'est-à-dire à un LAN qui assure, essentiellement, la connectivité de postes de travail et adresser les problématiques spécifiques :

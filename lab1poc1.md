@@ -25,7 +25,6 @@ BOM
 |Serveurs | 192.168.0.54 | .65 | .94 | .95 | /27 255.255.255.224 |
 |PCs | 192.168.0.128 | .129 | .190 | .191 | /26 255.255.255.192 |
 
-
 ### Première connexion au switch
 
 - Se connecter au switch
@@ -33,7 +32,6 @@ BOM
 - Activer le chiffrement des mots de passe
 - Définir le mot de passe enable à imie123
 - Modifier le message du jour(motd) "hello imie-sw1"
-
 
 ```
 enable
@@ -126,6 +124,15 @@ exit
 exit
 copy run start
 ```
+
+## Visualisation des informations réseau
+
+```
+show mac-address-table
+show ip dhcp binding
+show arp
+```
+
 
 ## Technologies abordées dans ce premier lab
 
