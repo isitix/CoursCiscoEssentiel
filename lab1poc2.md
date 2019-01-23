@@ -4,7 +4,7 @@ Nous allons à présent paramétrer la partie "WAN" et mettre en place une confi
 
 ## Contenu du POC
 
-- Prendre la partie WAN du schéma intial
+- Prendre la partie WAN du schéma initial
 - Ajouter les équipements correspondants dans packet tracer
   - Cisco 2960
   - Routeur ISR 4321
@@ -114,9 +114,60 @@ show ip route
 
 ### A faire
 
-- Ajouter les machines sur les VLANs 130 et 190
-- Ajouter un VLAN 9 et le configurer pour l'ASA
+- Ajouter les VLANs 130 et 190
+- Ajouter un serveur sur le VLAN 130
 
+#### Définition des IPs
+
+|Serveur | VLAN | Port | IP | Mask | Gateway |
+|--------|------|------|----|------|---------|
+|Serveur6|130|Fa0/1|12.130.1.1|255.255.0.0|12.130.0.1|
+
+#### Configuration des ports d'accès
+
+``` 
+enable
+conf t
+interface range FastEthernet 0/13-18
+switchport mode access
+switchport access vlan 130
+exit
+interface range FastEthernet 0/19-23
+switchport mode access
+switchport access vlan 190
+exit
+interface vlan 130
+no shutdown
+exit
+interface vlan 190
+no shutdown
+exit
+exit
+copy running-config startup-config
+```
+
+#### Configuration du routeur
+
+```
+enable
+conf t
+interface GigabitEthernet 0/0/0.130
+encapsulation dot1q 130
+ip address 12.130.0.1 255.255.0.0
+no shutdown
+exit
+interface GigabitEthernet 0/0/0.190
+encapsulation dot1q 190
+ip address 190.250.122.46 255.255.255.248
+no shutdown
+exit
+exit
+exit
+copy run start
+show ip route
+```
+
+- Ajouter l'ASA sur le VLAN 190
 
 ## Prochaines étapes
 
