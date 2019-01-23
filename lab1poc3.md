@@ -24,6 +24,12 @@ Reprendre la configuration [présentée ici](http://blog.isitix.com//main/2018/0
 |ASA / gw | 192.168.0.254|
 |ASA / internet|190.250.122.45 255.255.255.248|
 |Default route opérateur|190.250.122.46|
+|NTP server |192.168.0.67|
+|DNS server |192.168.0.67|
+
+### Configuration des VLANs et des ports
+
+[Configuration de l'ASA V0](configasaV0.txt)
 
 ## Prochaines étapes :
 
