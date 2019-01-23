@@ -76,9 +76,46 @@ Test de ping KO S1 => S5
 
 ### Configuration du trunk sur le switch
 
-
+```
+enable
+conf t
+interface GigabitEthernet 0/1
+switchport mode trunk
+description "vers routeur WAN1"
+no shutdown
+exit
+```
 
 ### Configuration du trunk sur le routeur
+
+```
+enable
+conf t
+hostname routeur-wan1
+interface GigabitEthernet 0/0/0.10
+encapsulation dot1q 10
+ip address 12.10.0.1 255.255.0.0
+no shutdown
+exit
+interface GigabitEthernet 0/0/0.70
+encapsulation dot1q 70
+ip address 12.70.0.1 255.255.0.0
+no shutdown
+exit
+interface GigabitEthernet 0/0/0
+no shutdown
+exit
+exit
+copy run start
+ping 12.10.1.1
+ping 12.70.1.1
+show ip route
+```
+
+### A faire
+
+- Ajouter les machines sur les VLANs 130 et 190
+- Ajouter un VLAN 9 et le configurer pour l'ASA
 
 
 ## Prochaines étapes
