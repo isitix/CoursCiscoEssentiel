@@ -67,12 +67,15 @@ copy running-config startup-config
 |--------|------|------|----|------|---------|
 |Serveur1|10|Fa0/1|12.10.1.1|255.255.0.0|12.10.0.1|
 |Serveur2|10|Fa0/2|12.10.1.2|255.255.0.0|12.10.0.1|
-|Serveur3|70|Fa0/6|12.70.1.1|255.255.0.0|12.70.0.1|
-|Serveur4|70|Fa0/6|12.70.1.2|255.255.0.0|12.70.0.1|
+|Serveur3|70|Fa0/7|12.70.1.1|255.255.0.0|12.70.0.1|
+|Serveur4|70|Fa0/8|12.70.1.2|255.255.0.0|12.70.0.1|
+|Serveur5|70|Fa0/9|12.10.1.3|255.255.0.0|12.10.0.1|
 
-Test de ping S1 => S2, etc...
+Test de ping S1 => S2, S4 => S5
+Test de ping KO S1 => S5
 
 ### Configuration du trunk sur le switch
+
 
 
 ### Configuration du trunk sur le routeur
