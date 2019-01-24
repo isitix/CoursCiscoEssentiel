@@ -17,8 +17,9 @@ Pour ce deuxième, nous allons travailler sur les problématiques spécifiques a
 Présentation générale d'un réseau campus et de ses problématiques à travers une situation type
 
 ## Labs
-- [Lab sur la configuration des VLANs](lab2vlan.md)
 
+- [Lab sur la configuration des VLANs](lab2vlan.md)
+- [Lab sur la configuration physique et la sécurité des ports](lab2portphysique.md)
 
 
 
