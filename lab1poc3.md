@@ -31,7 +31,14 @@ Reprendre la configuration [présentée ici](http://blog.isitix.com//main/2018/0
 
 [Configuration de l'ASA V0](configasaV0.txt)
 
+### Configuration route par défaut et NAT
+
+pb sur le NAT...
+
+### Réalisation d'une maquette NAT
+Suivre le tutoriel suivant <https://courses.cs.ut.ee/MTAT.08.004/2015_spring/uploads/Main/34_1.pdf>
+
 ## Prochaines étapes :
 
-Lab 1 POC 4 : configuration d'un réseau de management
+[Lab 1 POC 4](lab1poc4.md) : configuration d'un réseau de management
 
