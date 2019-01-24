@@ -11,7 +11,7 @@
 - Vérifier que le réseau fonctionne toujours (dhcp et station)
 - Mettre une station avec une IP fixe sur le port 24
 - Vérifier que la station a bien accès au switch
-- Déplacer le réseau se trouvant sur le VLAN 10 du 192.168.0.0/24 vers le 192.168.44.0/44
+- Déplacer le réseau se trouvant sur le VLAN 10 du 192.168.0.0/24 vers le 192.168.44.0/24
 - Vérifier que tout fonctionne correctement
 
 ## Dans l'architecture WAN POC
