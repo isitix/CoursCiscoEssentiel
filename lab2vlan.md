@@ -79,3 +79,7 @@ Il peut être activer au niveau global de l'équipement et au niveau des ports
 - Désactiver CDP sur le 2960-2, que se passe-t-il ?
 - Réactiver
 - Désactiver CDP sur le port trunk du 2960-2 vers 2960-1, que se passe-t-il ?
+
+## Autre LAB
+
+Exemple standard sur packet tracer <https://www.packettracernetwork.com/labs/lab3-vlanvtpconfig.html>
