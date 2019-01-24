@@ -36,8 +36,9 @@ Reprendre la configuration [présentée ici](http://blog.isitix.com//main/2018/0
 pb sur le NAT...
 
 ### Réalisation d'une maquette NAT
-Suivre le tutoriel suivant <https://courses.cs.ut.ee/MTAT.08.004/2015_spring/uploads/Main/34_1.pdf>
 
+Suivre le tutoriel suivant <https://courses.cs.ut.ee/MTAT.08.004/2015_spring/uploads/Main/34_1.pdf>
+Explication concernant le NAT [ici](https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/13772-12.html#topic2)
 ## Prochaines étapes :
 
 [Lab 1 POC 4](lab1poc4.md) : configuration d'un réseau de management
