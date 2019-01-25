@@ -112,3 +112,6 @@ Le cours s'efforce d'adopter une approche :
 
 - [LAB1 : TPE](lab1.md)
 - Fondamentaux : [le contenu du CCNA](contenuccna.md)
+
+## Dernier quiz
+- [Quiz 4](https://goo.gl/forms/hMfaGWOlugfCb63r2)

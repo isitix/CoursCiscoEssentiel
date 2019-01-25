@@ -101,9 +101,8 @@ En environnement local technique et salle serveur, les boucles sont plus probabl
 - Ajouter un deuxième switch de distribution Distribution1 en double attachement sur les Access
 - Ajouter deux PCs sur Distribution1
 - Pinger un PC de D0 depuis D1. Par quel A le trafic passe-t-il ?
-- Ajouter un lien entre les ports 24 de D0 et D1. 
-Que se passe-t-il ?
-- Passer les ports 24 de D0 et D1 en rapid STP. 
+- Ajouter un lien entre les ports 24 de D0 et D1. Que se passe-t-il ?
+- Passer les ports 24 de D0 et D1 en rapid STP.
 - Quelle est la topologie de convergence ?
 - Retirer ce lien
 - Migrer les ports 1 à 12 de D0 et D1 vers le VLAN 44.
