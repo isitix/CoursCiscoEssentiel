@@ -20,4 +20,4 @@ Présentation générale d'un réseau campus et de ses problématiques à traver
 
 - [Lab sur la configuration physique et la sécurité des ports](lab2portphysique.md)
 - [Lab concernant le spanning tree](lab2stp.md)
-- [Lab concernant l'agrégation de liens][lab2lacp.md]
+- [Lab concernant l'agrégation de liens](lab2lacp.md)
