@@ -2,7 +2,7 @@
 
 ## Contenu
 
-Pour ce deuxième, nous allons travailler sur les problématiques spécifiques au LAN Campus, c'est-à-dire à un LAN qui assure, essentiellement, la connectivité de postes de travail et adresser les problématiques spécifiques :
+Pour ce deuxième lab, nous allons travailler sur les problématiques spécifiques au LAN Campus, c'est-à-dire à un LAN qui assure, essentiellement, la connectivité de postes de travail et adresser les problématiques spécifiques :
 
 - La configuration et la gestion des VLANs
 - La configuration des ports physiques
@@ -20,12 +20,4 @@ Présentation générale d'un réseau campus et de ses problématiques à traver
 
 - [Lab sur la configuration des VLANs](lab2vlan.md)
 - [Lab sur la configuration physique et la sécurité des ports](lab2portphysique.md)
-
-
-
-
-
-
-
-
-
+- [Lab concernant le spanning tree](lab2stp.md)
