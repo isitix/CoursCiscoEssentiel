@@ -22,7 +22,6 @@ Les sujets qui pourront être abordés lors du cours sont les suivants:
 - Gestion des équipements
   - Utilisateurs et droits
   - Authentification simple, par clé, kerberos
-  - Sauvegarde, restauration
   - Accès port console, SSH
   - Sauvegarde, restauration de la configuration
   - Mise à jour
@@ -107,3 +106,11 @@ Le cours s'efforce d'adopter une approche :
   - Temps de recherche et de travail personnels ou en équipe
   - Fourniture d'une solution type détaillée
   - Quizz réalisés individuellement
+
+## Rythme du cours
+
+Le cours est organisé sur 2 x 4 jours. Les 4 premiers jours rappellent les fondamentaux des réseaux Cisco. Les 4 derniers jours sont consacrés à des notions plus avancées.
+
+## Supports de cours
+
+Les supports correspondant à la première partie sont [accessibles ici](Part1/README.md); ceux de la deuxième partie sont [accessibles ici](Part2/README.md).
