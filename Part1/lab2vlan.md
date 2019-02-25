@@ -59,12 +59,12 @@ Il peut être activer au niveau global de l'équipement et au niveau des ports
 ## Lab
 
 - Ouvrir un nouveau lab
-- Ajouter 2 2960 et un 3560
-- Connecter les trois switchs comme suit 2960-1 -> 2960-2 -> 3560
+- Ajouter 3 2960
+- Connecter les trois switchs comme suit 2960-1 -> 2960-2 -> 2960-0
 - Activer VTP
   - Domaine : imie
   - Password : imie123
-  - 3560 en server
+  - 2960-0 en server
   - 2960-1 en client
   - 2960-2 en transparent
 - Vérifier que VTP est ok

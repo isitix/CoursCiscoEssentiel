@@ -105,5 +105,3 @@ En environnement local technique et salle serveur, les boucles sont plus probabl
 - Passer les ports 24 de D0 et D1 en rapid STP.
 - Quelle est la topologie de convergence ?
 - Retirer ce lien
-- Migrer les ports 1 à 12 de D0 et D1 vers le VLAN 44.
-- Quel est l'impact sur la configuratoin STP

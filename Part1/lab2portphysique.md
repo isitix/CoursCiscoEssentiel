@@ -15,6 +15,7 @@ La sécurité des ports peut également être renforcée en imposant des règles
 ## Lab
 
 ### Paramètres physiques
+
 - Mettre deux 2960 sur le lab, 2960-1 et 2960-2
 - Connecter deux PC sur le 2960-1
 - Connecter un serveur DHCP sur le 2960-2
@@ -36,3 +37,7 @@ La sécurité des ports peut également être renforcée en imposant des règles
 - Comment rétablir le trafic sur ces deux PCs en les maintenant sur le même port
 - Lire le blog suivant <https://www.netcraftsmen.com/understanding-cisco-traffic-storm-control/>
 - Ajouter du storm control sur les ports
+
+## Méthode standard Cisco de troubleshooting des ports
+
+<https://www.cisco.com/c/en/us/support/docs/switches/catalyst-6500-series-switches/12027-53.html>
