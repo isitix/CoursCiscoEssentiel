@@ -56,4 +56,3 @@ Le Lab2 couvre l'essentiel des sujets suivants :
   - [Spanning tree](lab2stp.md)
   - [VLAN](lab2vlan.md)
 
-  
