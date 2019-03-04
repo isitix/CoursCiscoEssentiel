@@ -2,6 +2,8 @@
 
 Un cours Cisco pour débutant librement inspiré du livre ["Cisco in a month of lunches" paru aux éditions Manning](https://www.manning.com/books/learn-cisco-network-administration-in-a-month-of-lunches) et donné à l'IMIE de Nantes en 2019, sous forme de deux sessions de quatre jours.
 
+Pour certains sujets, les ressources fournies gratuitement sur le site [David Bombal](https://davidbombal.com/) constituent un complément intéressant du cours.
+
 ## Syllabus
 
 Le syllabus a été défini par l'équipe pédagogique de [l'IMIE de Nantes](https://numerique.imie.fr/).

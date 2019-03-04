@@ -44,6 +44,9 @@ Le Lab2 couvre l'essentiel des sujets suivants :
 ## Ressources
 
 - [Notions générales concernant le LAN](bagagetechniquelab1poc1)
+
+## Labs
+
 - [Présentation du lab 1](lab1.md)
   - [Etude préalable du projet](lab1etudeprealable.md)
   - [Prototype 1](lab1poc1.md)
@@ -56,3 +59,9 @@ Le Lab2 couvre l'essentiel des sujets suivants :
   - [Spanning tree](lab2stp.md)
   - [VLAN](lab2vlan.md)
 
+## Testez vos connaissance!
+
+- [Quiz 1: Configuration LAN basique](https://goo.gl/forms/897vnBKsGFYlY0xz2)
+- [Quiz 2: connaissances fondamentales du LAN](https://goo.gl/forms/9p370fJiINXzIf3i2)
+- [Quiz 3 : router on a stick](https://goo.gl/forms/FCMjblSf1qfjg5xX2)
+- [Quiz 4: trunking, aggrégation de liens, spanning tree](https://goo.gl/forms/VN5x6lB9oUYrezSI2)
