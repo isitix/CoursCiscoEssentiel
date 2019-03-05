@@ -45,6 +45,7 @@ interface range Fast 0/1-24
     spanning-tree portfast
     no shutdown
     exit
+ip routing
 exit
 copy run start
 ```
