@@ -94,4 +94,5 @@ line vty 0 15
     transport output ssh
     exit
 exit
+ssh -l administrateur 192.168.1.11
 ```

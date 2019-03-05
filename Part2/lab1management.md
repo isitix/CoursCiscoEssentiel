@@ -61,7 +61,7 @@ SNMP s'appuie sur un modèle arborescent et normalisé de représensation de l'i
 
 ### Informations complémentaires
 
-- Différences entre [les trois versions](https://www.logicmonitor.com/blog/whats-with-the-different-snmp-versions-s1-v2c-v3/)
+- Différences entre [les trois versions](https://www.logicmonitor.com/blog/whats-with-the-different-snmp-versions-s1-v2c-v3/) de SNMP
 - [Article Wikipedia](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol)
 - Des [recommandations de Cisco](https://www.cisco.com/c/en/us/support/docs/ip/simple-network-management-protocol-snmp/20370-snmpsecurity-20370.html) pour sécuriser SNMP
 
