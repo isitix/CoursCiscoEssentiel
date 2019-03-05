@@ -38,6 +38,6 @@
 - [Lab 2, disponibilité](lab2disponibilite.md)
 - [Lab 3, filtrage du trafic par ACL](lab3acl.md)
 - [Lab 4, routage](lab4routage.md)
-- [Lab 5, VPN](lab5vpn.md)
-- [Lab 6, diagnostic](lab6tshoot.md)
+- [Lab 5, VPN (option)](lab5vpn.md)
 
+Nous terminerons par des [tests sur du matériel physique](labfinalmateriel.md) de l'IMIE, routeurs et switches.
