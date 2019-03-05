@@ -50,5 +50,48 @@ exit
 copy run start
 ```
 
+### Configuration du switch L2 D1
 
+```ios
+en
+conf t
+host D1
 
+vtp mode client
+vtp dom imie
+vtp pass imie
+
+span mode rapid
+
+interface range Giga 0/1-2
+    switch mode trunk
+    exit
+interface range Fa 0/2-24
+    switch mode access
+    switch access vlan 100
+    no shut
+    exit
+interface Fa 0/1
+    switch mode access
+    switch access vlan 1
+    no shut
+    exit
+
+interface vlan 1
+    ip address 192.168.1.11 255.255.255.0
+    no shut
+    exit
+
+service password
+username administrateur privilege 15 password imie
+
+ip domain-name imie
+crypto key gener rsa gen mod 4096
+
+line vty 0 15
+    login local
+    transport input ssh
+    transport output ssh
+    exit
+exit
+```
