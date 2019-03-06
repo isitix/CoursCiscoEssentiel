@@ -49,6 +49,7 @@ Nous terminerons par des tests sur du matériel physique de l'IMIE, routeurs et 
 - [Lab1, snmp](lab1snmp.pkt)
 - [Lab2, hsrp](lab2hsrp.pkt)
 - [Lab3, acl](lab3acl.pkt)
+- [Lab4, EIGRP](lab4routage.md)
 - [Lab final, materiel](labfinalmateriel.pkt)
 
 ## Corrigé (commandes) des labs
