@@ -40,4 +40,19 @@
 - [Lab 4, routage](lab4routage.md)
 - [Lab 5, VPN (option)](lab5vpn.md)
 
-Nous terminerons par des [tests sur du matériel physique](labfinalmateriel.md) de l'IMIE, routeurs et switches.
+Nous terminerons par des tests sur du matériel physique de l'IMIE, routeurs et switches.
+
+## Fichiers packet tracer des labs
+
+- [Lab1, management](lab1management.kt)
+- [Lab1, TACACS](lab1tacacs.pkt)
+- [Lab1, snmp](lab1snmp.pkt)
+- [Lab2, hsrp](lab2hsrp.pkt)
+- [Lab3, acl](lab3acl.pkt)
+- [Lab final, materiel](labfinalmateriel.pkt)
+
+## Corrigé (commandes) des labs
+
+- [Lab1, management](lab1managementcommandes.md)
+- [Lab1, TACACS](lab1tacacscommandes.md)
+- [Lab1, snmp](lab1snmpcommandes.md)
