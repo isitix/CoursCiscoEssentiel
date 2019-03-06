@@ -32,6 +32,7 @@ interface range Giga 0/1-2
     no shutdown
     exit
 exit
+spanning-tree mode rapid
 copy run start
 ```
 
