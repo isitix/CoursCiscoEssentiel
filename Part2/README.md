@@ -56,3 +56,7 @@ Nous terminerons par des tests sur du matériel physique de l'IMIE, routeurs et 
 - [Lab1, management](lab1managementcommandes.md)
 - [Lab1, TACACS](lab1tacacscommandes.md)
 - [Lab1, snmp](lab1snmpcommandes.md)
+
+## Lab Cisco dcloud Cyber Defense Clinic
+
+[quelques éléments ici](labciscocyberdefenseclinic.md)
