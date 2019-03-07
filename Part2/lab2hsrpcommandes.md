@@ -150,7 +150,7 @@ interface range Giga 1/0/4-24
     exit
 
 interface range Giga 1/1/1-4
-    switchport trunk encapsulation dot1q 
+    switchport trunk encapsulation dot1q
     switchport mode trunk
     shutdown
     exit
@@ -189,3 +189,65 @@ interface vlan 20
     no shut
     exit
 ```
+
+## Activation du routage sur C1 et 2
+
+A faire sur C1 et C2
+
+```ios
+ip routing
+```
+
+## Root spanning tree C1
+
+```ios
+spanning-tree vlan 10 priority 4096
+spanning-tree vlan 20 priority 4096
+```
+
+## Root 2 sur C2
+
+```ios
+spanning-tree vlan 10 priority 8192
+spanning-tree vlan 20 priority 8192
+```
+
+## HSRP sur Vlan 10 et 20
+
+### C1
+
+```ios
+interface vlan 10
+    standby ip 192.168.10.254
+    standby track Giga 1/0/3
+    standby priority 100
+    exit
+interface vlan 20
+    standby ip 192.168.20.254
+    standby track Giga 1/0/3
+    standby priority 100
+    exit
+```
+
+### C2
+
+```ios
+interface vlan 10
+    standby ip 192.168.10.254
+    standby track Giga 1/0/3
+    standby priority 90
+    exit
+interface vlan 20
+    standby ip 192.168.20.254
+    standby track Giga 1/0/3
+    standby priority 90
+    exit
+```
+
+
+
+
+
+
+
+
