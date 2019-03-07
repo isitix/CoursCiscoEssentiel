@@ -26,7 +26,7 @@ Le mode de fonctionnement de ces deux types de protocole est très différent :
 - pour le distance vector, seule l'information concernant les voisins est transmise entre les routeurs; le calcul de la route est collectif, la convergence est distribuée mais peut être lente
 - pour le link state, les routeurs échangent des informations de mise à jour de leur base de liens; le volume d'information échangé et stocké est plus important. Chaque routeur calcule lui-même sa route, ce qui représente également une charge CPU importante. 
 
-Dans les protocoles intérieurs, seul OSPF est de type link state. Les autres sont de type link state (eigrp, rip).
+Dans les protocoles intérieurs, seul OSPF est de type link state. Les autres sont de type distance vector (eigrp, rip).
 
 ### CIDR et route summarization
 
