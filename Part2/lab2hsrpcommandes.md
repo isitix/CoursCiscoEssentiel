@@ -243,11 +243,3 @@ interface vlan 20
     standby priority 90
     exit
 ```
-
-
-
-
-
-
-
-
