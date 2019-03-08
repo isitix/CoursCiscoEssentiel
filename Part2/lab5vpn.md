@@ -38,3 +38,9 @@ Points importants à retenir :
   - Routage
   - ACL
 - Sur les ASA notamment, le chiffrement et la montée du tunnel sont induits par le trafic et pas l'inverse. C'est la transformation du trafic qui fait monter le tunnel et le tunnel n'existe que par le trafic qu'il transporte. Le tunnel n'est donc pas un lien réseau à proprement mais une transformation appliquée à des paquets en fonction d'une security map.
+
+## Lab
+
+- Réaliser l'exemple asa_service_policy fourni avec packet tracer
+- Réaliser l'exemple asa_acl_nat fourni avec packet tracer
+- Réaliser le lab packet tracer [téléchargeable ici](lab5ipsec.pkt)
