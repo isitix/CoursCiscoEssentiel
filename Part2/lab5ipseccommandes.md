@@ -52,6 +52,54 @@ interface Vlan3
 security-level : le trafic passe des security-level les plus hauts vers les plus bas, par défaut, mais pas dans l'autre sens.
 no-forward : bloque le trafic sortant du VLAN (pour respecter les règles de licence). Voir [ici](http://www.gomjabbar.com/2011/09/11/no-forward-interface-command-on-the-cisco-asa-5505-with-a-base-license/#sthash.Ryd8yyzg.dpbs) pour plus de détails.
 
+### Configuration d'une security-policy pour laisser passer le ping
+
+Définir le trafic auquel la security policy va s'appliquer
+
+```ios
+class-map testMap
+    match any
+    exit
+```
+
+Définir la politique de sécurit
+
+```ios
+policy-map testPolicy
+    class testMap
+    inspect icmp
+    exit
+```
+
+Appliquer la politique de sécurité à l'interface
+
+```ios
+service-policy testPolicy interface inside
+```
+
+## Lab asa_acl_nat
+
+La configuration de base est identique à celle de l'exemple précédent.
+
+Y a été ajouté une route par défaut en IPV4 et IPV6:
+
+```ios
+ipv6 route outside ::/0 2090::225
+route outside 0.0.0.0 0.0.0.0 209.165.200.225 1
+```
+
+la récupération automatique de paramètres réseau par dhcp si l'IP outside est en dhcp. [Voir ici](https://community.cisco.com/t5/vpn-and-anyconnect/dhcpd-auto-config-outside/td-p/1656016) pour plus de détails.
+
+```ios
+dhcpd auto_config outside
+```
+
+Un serveur dhcpd interne :
+
+```ios
+dhcpd address 192.168.1.5-192.168.1.34 inside
+dhcpd enable inside
+```
 
 ## Lab VPN
 VPN site à site entre deux ASA
