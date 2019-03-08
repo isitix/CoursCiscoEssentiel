@@ -1,4 +1,60 @@
-# VPN site à site entre deux ASA
+# Labs ASA
+
+## Lab asa_service_policy (exemples fournis avec packet tracer)
+
+### Nom du parefeu
+
+```ios
+hostname ciscoasa
+```
+
+### Activation de la conversion IP<->Nom
+
+```ios
+names
+```
+
+Voir [ici](https://community.cisco.com/t5/firewalls/what-happens-if-i-issue-the-quot-no-names-quot-command-on-a/td-p/1364904
+)
+
+### Configuration des interfaces
+
+```ios
+interface Ethernet0/0
+ switchport access vlan 2
+interface Ethernet0/2
+ switchport access vlan 3
+```
+
+### Configuration des VLANs
+
+```ios
+interface Vlan1
+ nameif inside
+ security-level 100
+ ip address 192.168.1.1 255.255.255.0
+ ipv6 address 1920:1::1/80
+
+interface Vlan2
+ nameif outside
+ security-level 0
+ ip address 209.165.200.226 255.255.255.248
+ ipv6 address 2090::226/64
+
+interface Vlan3
+ no forward interface Vlan1
+ nameif dmz
+ security-level 70
+ ip address 192.168.2.1 255.255.255.0
+ ipv6 address 1920:2::1/80
+```
+
+security-level : le trafic passe des security-level les plus hauts vers les plus bas, par défaut, mais pas dans l'autre sens.
+no-forward : bloque le trafic sortant du VLAN (pour respecter les règles de licence). Voir [ici](http://www.gomjabbar.com/2011/09/11/no-forward-interface-command-on-the-cisco-asa-5505-with-a-base-license/#sthash.Ryd8yyzg.dpbs) pour plus de détails.
+
+
+## Lab VPN
+VPN site à site entre deux ASA
 
 Le fichier packet tracer de départ est accessible ici
 
@@ -10,27 +66,20 @@ Le fichier packet tracer de départ est accessible ici
 en
 conf t
 hostname WS
-vlan 10
-    name data
-    exit
 
 interface vlan 1
     ip address 192.168.1.1 255.255.255.0
     no shutdown
-
-interface range Fa 0/1-23
+    exit
+interface range Fa 0/1-24
     switchport mode access
-    switchport access vlan 10
+    switchport access vlan 1
     spanning-tree portfast
     no shutdown
     exit
-interface Fa 0/24
-    switchport mode access
-    switchport access vlan 1
-    no shutdown
 interface range Giga 0/1-2
     switchport mode access
-    switchport access vlan 10
+    switchport access vlan 1
     no shutdown
     exit
 exit
@@ -49,42 +98,18 @@ Identique à WS sauf le nom.
 hostname WASA
 domain-name west
 
-interface management 1/1
-    ip address 192.168.1.2 255.255.255.0
+interface vlan 2
+    ip address 172.0.0.1
     no shutdown
     exit
 
-interface Giga 1/1
-    ip address 192.168.10.254 255.255.255.0
-    nameif inside
+interface ethernet 0/0
+    switchport access vlan 2
     no shutdown
     exit
+no dhcpd auto_config outside
+dhcpd option 3 ip 192.168.1.1 interface inside
 
-interface Giga 1/2
-    no nameif outside
-    shutdown
-    exit
-interface Giga 1/3
-    shutdown
-    exit
-interface Giga 1/4
-    shutdown
-    exit
-interface Giga 1/5
-    shutdown
-    exit
-interface Giga 1/6
-    shutdown
-    exit
-interface Giga 1/7
-    shutdown
-    exit
-
-interface Giga 1/8
-    ip address 172.0.0.1 255.255.255.0
-    nameif outside
-    no shutdown
-    exit
 ```
 
 ### EASA
