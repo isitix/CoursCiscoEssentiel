@@ -119,15 +119,16 @@ interface vlan 1
     ip address 192.168.1.1 255.255.255.0
     no shutdown
     exit
+vlan 10
+    exit
 interface range Fa 0/1-24
     switchport mode access
-    switchport access vlan 1
+    switchport access vlan 10
     spanning-tree portfast
     no shutdown
     exit
 interface range Giga 0/1-2
-    switchport mode access
-    switchport access vlan 1
+    switchport mode trunk
     no shutdown
     exit
 exit
@@ -142,69 +143,113 @@ Identique à WS sauf le nom.
 
 ### WASA
 
+#### host et domain
+
 ```ios
 hostname WASA
 domain-name west
-
-interface vlan 2
-    ip address 172.0.0.1
-    no shutdown
-    exit
-
-interface ethernet 0/0
-    switchport access vlan 2
-    no shutdown
-    exit
-no dhcpd auto_config outside
-dhcpd option 3 ip 192.168.1.1 interface inside
-
 ```
 
-### EASA
+#### VLAN
 
-Idem WASA sauf IP et nom
+Remarque : on supprime la configuration par défaut, d'où les commandes en no
 
 ```ios
-hostname EASA
-domain-name east
-
-interface management 1/1
-    ip address 192.168.1.2 255.255.255.0
-    no shutdown
-    exit
-
-interface Giga 1/1
-    ip address 192.168.110.254 255.255.255.0
-    nameif inside
-    no shutdown
-    exit
-
-interface Giga 1/2
+interface vlan 2
     no nameif outside
-    shutdown
-    exit
-interface Giga 1/3
-    shutdown
-    exit
-interface Giga 1/4
-    shutdown
-    exit
-interface Giga 1/5
-    shutdown
-    exit
-interface Giga 1/6
-    shutdown
-    exit
-interface Giga 1/7
-    shutdown
+    no security-level 0
+    no ip address dhcp
     exit
 
-interface Giga 1/8
-    ip address 172.0.0.2 255.255.255.0
+interface vlan 1
+    no nameif inside
+    no security-level 100
+    exit
+
+interface vlan 10
+    nameif inside
+    ip address 192.168.10.254 255.255.255.0
+    no shut
+    exit
+
+interface vlan 20
+    ip address 172.0.0.1 255.255.255.0
     nameif outside
     no shutdown
     exit
+
+interface vlan 1
+    ip address 192.168.1.2 255.255.255.0
+    no forward interface vlan 10
+    no shutdown
+    exit
 ```
+
+#### Interfaces physiques
+
+Remarque :
+
+- on ne peut pas faire de trunk, ce qui pose des problèmes pour le VLAN de management (ou il faut lui attribuer un port physique ou le mettre en accès VPN)
+- on désactive les ports physiques non utilisés (optionnel) 
+
+```ios
+interface ethernet 0/0
+    switchport access vlan 10
+    no shutdown
+    exit
+
+interface ethernet 0/7
+    switchport access vlan 20
+    exit
+
+interface ethernet 0/1
+    shutdown
+    exit
+
+interface ethernet 0/2
+    shutdown
+    exit
+
+interface ethernet 0/3
+    shutdown
+    exit
+
+interface ethernet 0/4
+    shutdown
+    exit
+
+interface ethernet 0/5
+    shutdown
+    exit
+
+interface ethernet 0/6
+    shutdown
+    exit
+```
+
+#### DHCPD
+
+Option 3 : default gateway
+
+```ios
+no dhcpd auto_config outside
+
+dhcpd address 192.168.10.17-192.168.10.31 inside 
+dhcpd enable inside
+dhcpd option 3 ip 192.168.10.254 interface inside
+```
+
+#### Trafic inspection
+
+```ios
+class-map ping-cm
+    match any
+    exit
+
+policy-map ping-pm
+    class ping-cm
+
+
 
 ## NAT
 
@@ -213,14 +258,6 @@ interface Giga 1/8
 ```ios
 object network LAN_DATA
     subnet 192.168.10.0 255.255.255.0
-    nat (inside,outside) dynamic interface
-```
-
-### EASA
-
-```ios
-object network LAN_DATA
-    subnet 192.168.110.0 255.255.255.0
     nat (inside,outside) dynamic interface
 ```
 
@@ -235,18 +272,4 @@ threat-detection statistics port
 threat-detection statistics protocol
 threat-detection statistics access-list
 threat-detection statistics tcp-intercept
-```
-
-## Traffic inspection
-
-```ios
-class-map insideout
-    match any
-    exit
-policy-map global_policy
-    class insideout
-        inspect icmp
-        exit
-    exit
-service-policy global_policy global
 ```
