@@ -61,3 +61,7 @@ Nous terminerons par des tests sur du matériel physique de l'IMIE, routeurs et 
 ## Lab Cisco dcloud Cyber Defense Clinic
 
 [quelques éléments ici](labciscocyberdefenseclinic.md)
+
+## Quizz de fin de module
+
+[Accès au quizz](https://goo.gl/forms/gYBrE1SQ9v0SPXuW2)
